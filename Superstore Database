@@ -1,0 +1,20 @@
+-- q1 taking a peek at the column names
+SELECT *
+FROM superstore
+LIMIT 5;
+
+-- q2 prompt 1 ordering the items by price
+SELECT item_name, price
+FROM superstore
+ORDER BY price;
+
+-- q3 prompt 2 showing a statistic about the items
+SELECT SUM (price),item_name
+FROM superstore
+GROUP BY item_name;
+
+-- q4 prompt 3 showing a avg price of kitchen items
+SELECT AVG (price)
+FROM superstore
+WHERE category='Kitchen Supplies';
+
